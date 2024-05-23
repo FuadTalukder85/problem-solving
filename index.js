@@ -29,3 +29,20 @@ const BookTitle = (books) => {
 };
 
 console.log(BookTitle(books));
+
+// 3. Task: Function Composition
+// Write Three Functions: One To Square A Number, One To Double A Number, And One To Add 5 To A Number. Compose These Functions To Create A New Function That Squares A Number, Doubles The Result, And Then Adds 5.
+
+const square = (number) => number * number;
+const double = (number) => number * 2;
+const addFive = (number) => number + 5;
+
+const totalNumber = (number) => {
+  const squared = square(number);
+  const doubled = double(squared);
+  const five = addFive(doubled);
+  return five;
+};
+
+const result = totalNumber(5);
+console.log(result);
