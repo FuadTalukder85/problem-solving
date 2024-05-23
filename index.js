@@ -46,3 +46,15 @@ const totalNumber = (number) => {
 
 const result = totalNumber(5);
 console.log(result);
+
+// 4. Task: Sorting Objects
+// Create An Array Of Objects Representing Cars With Properties Like Make, Model, And Year. Write A Function To Sort The Array Of Cars By The Year Of Manufacture In Ascending Order. Print The Sorted Array.
+
+const cars = [
+  { make: "Honda", model: "Civic 1.5L 11th gen", year: 2024 },
+  { make: "Honda", model: "Civic Type R", year: 2020 },
+  { make: "Honda", model: "Civic FD2", year: 2010 },
+];
+
+const sortData = [...cars].sort((a, b) => a.year - b.year);
+console.log(sortData);
