@@ -13,7 +13,7 @@ const AllFemales = (person) => {
   const male = males.map((male) => male.name);
   return male;
 };
-console.log(AllFemales(person));
+// console.log(AllFemales(person));
 
 // 2. Task: Object Manipulation
 // Create An Array Of Objects Representing Books With Properties Like Title, Author, And Year. Write A Function That Takes The Array And Returns A New Array With Only The Book Titles. Print The Result.
@@ -28,7 +28,7 @@ const BookTitle = (books) => {
   return title;
 };
 
-console.log(BookTitle(books));
+// console.log(BookTitle(books));
 
 // 3. Task: Function Composition
 // Write Three Functions: One To Square A Number, One To Double A Number, And One To Add 5 To A Number. Compose These Functions To Create A New Function That Squares A Number, Doubles The Result, And Then Adds 5.
@@ -45,7 +45,7 @@ const totalNumber = (number) => {
 };
 
 const result = totalNumber(5);
-console.log(result);
+// console.log(result);
 
 // 4. Task: Sorting Objects
 // Create An Array Of Objects Representing Cars With Properties Like Make, Model, And Year. Write A Function To Sort The Array Of Cars By The Year Of Manufacture In Ascending Order. Print The Sorted Array.
@@ -57,4 +57,24 @@ const cars = [
 ];
 
 const sortData = [...cars].sort((a, b) => a.year - b.year);
-console.log(sortData);
+// console.log(sortData);
+
+// 5. Task: Find And Modify
+// Write A Function That Searches An Array Of Objects For A Specific Person By Name. If Found, Modify Their Age Property. Print The Updated Array.
+
+// 6 .Task: Array Reduction
+// Create An Array Of Numbers. Write A Function That Uses The Reduce Method To Calculate The Sum Of All Even Numbers In The Array.
+
+const number = [2, 4, 6, 9, 2, 11];
+
+const evenNum = (arr) => {
+  return arr.reduce((sum, num) => {
+    if (num % 2 === 0) {
+      return sum + num;
+    } else {
+      return sum;
+    }
+  }, 0);
+};
+const evenNumbers = evenNum(number);
+console.log(evenNumbers);
